@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
+:root {
+  --color-primary: teal;
+  --color-mid: #eeeeee;
+  --color-light: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,13 +19,13 @@ body {
 }
 
 header {
-  background: teal;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-light);
   padding: 1rem;
 }
 
 .underline {
-  background-color: #fff;
+  background-color: var(--color-light);
   height: 5px;
   width: 10rem;
 }
@@ -32,4 +38,39 @@ img {
 
 .wrap {
   padding: 1rem;
+}
+
+.content {
+  background: var(--color-mid);
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.content p {
+  margin-top: 1rem;
+}
+
+.content .info {
+  display: flex;
+  align-items: center;
+}
+
+.content .info .user {
+  margin-left: 1rem;
+}
+
+.content .info .user p {
+  color: var(--color-primary);
+}
+
+.btn-container {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.btn-container button {
+  border: none;
+  font-size: 2rem;
+  padding: 0 1rem;
+  cursor: pointer;
 }
