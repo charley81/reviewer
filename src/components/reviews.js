@@ -5,6 +5,7 @@ import { FaRandom } from 'react-icons/fa'
 
 const Review = () => {
   const [index, setIndex] = useState(3)
+  const [readMore, setReadMore] = useState(false)
   const { name, img, job, text } = data[index]
 
   const checkNumber = number => {
@@ -52,7 +53,17 @@ const Review = () => {
           <p>{job}</p>
         </div>
       </div>
-      <p>{text}</p>
+      <p>
+        {readMore ? text : text.substring(0, 100)}
+        <button
+          className="read-more"
+          onClick={() => {
+            setReadMore(!readMore)
+          }}
+        >
+          {readMore ? 'show less' : 'read more'}
+        </button>
+      </p>
       <div className="btn-container">
         <button className="btn prev" onClick={prevReview}>
           <GrPrevious className="icon" />

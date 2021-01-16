@@ -4,6 +4,7 @@
   --color-primary: teal;
   --color-mid: #eeeeee;
   --color-light: #ffffff;
+  --site-width: 800px;
 }
 
 * {
@@ -44,6 +45,8 @@ img {
   background: var(--color-mid);
   padding: 1rem;
   border-radius: 3px;
+  max-width: var(--site-width);
+  margin: auto;
 }
 
 .content p {
@@ -72,5 +75,12 @@ img {
   border: none;
   font-size: 2rem;
   padding: 0 1rem;
+  cursor: pointer;
+}
+
+.read-more {
+  border: none;
+  margin-left: 1rem;
+  color: var(--color-primary);
   cursor: pointer;
 }
