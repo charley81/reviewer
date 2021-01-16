@@ -23,3 +23,13 @@ header {
   height: 5px;
   width: 10rem;
 }
+
+img {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.wrap {
+  padding: 1rem;
+}
