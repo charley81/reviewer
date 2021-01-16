@@ -19,6 +19,16 @@ const Review = () => {
     return number
   }
 
+  const randomReview = () => {
+    let randomNumber = Math.floor(Math.random() * data.length)
+
+    if (randomNumber === index) {
+      randomNumber = index + 1
+    }
+
+    setIndex(checkNumber(randomNumber))
+  }
+
   const prevReview = () => {
     setIndex(index => {
       let newIndex = index - 1
@@ -47,7 +57,7 @@ const Review = () => {
         <button className="btn prev" onClick={prevReview}>
           <GrPrevious className="icon" />
         </button>
-        <button className="btn random">
+        <button className="btn random" onClick={randomReview}>
           <FaRandom />
         </button>
         <button className="btn next" onClick={nextReview}>
